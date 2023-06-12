@@ -1,3 +1,3 @@
 # Counselling Appointment Website
-Counselling Appointment Website under IITISoC 2023.
+Counselling Appointment System under IITISoC 2023.
 ## GitHub 
