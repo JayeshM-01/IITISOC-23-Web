@@ -4,13 +4,22 @@
 }
 
 div.nav {
-   background-color: aqua;
+   background-color: #4CAF50;
 }
 
 div.navi {
-  padding: 2vh;
-  word-spacing: 2vw;
-  font-size: 5vh;
-
+  padding: 1vh;
+  word-spacing: 1vw;
+  font-size: 1vh;
 }
 
+button {
+  background-color: #4CAF50; /* Green */
+  border: white ;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
