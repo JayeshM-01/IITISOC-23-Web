@@ -35,7 +35,7 @@ export const Login = () => {
 
     return (
         <div className="cover">
-            <h1>Login</h1>
+            <h1>Login/Sign up?</h1>
             <input type="text" placeholder="username" />
             <input type="password" placeholder="password" />
 
@@ -46,7 +46,7 @@ export const Login = () => {
             <div className="alt-login">
                 <div className="facebook"></div>
                 <div className="google">
-                    <GoogleLogin className="blue"
+                    <GoogleLogin className="googlelogin"
                         clientId="79474543031-tmjo35916ufn421ej3u1i2ljao2apr4s.apps.googleusercontent.com"
                         buttonText=""
                         onSuccess={onSuccess}

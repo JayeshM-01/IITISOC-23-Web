@@ -1,35 +1,45 @@
-* {
+*{
     margin: 0;
     box-sizing: border-box;
     font-family: "CustomFont";
 }
 
- /* @font-face {
+/* @font-face {
     font-family: "CustomFont";
    src: url("../fonts/RolexLight.woff2"); 
 }*/
 
 /* --------------------------- for mobile ------------------------------ */
 .page {
-    height: 100vh;
-    width: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
     font-size: 0.75em;
 }
 
 .cover {
-    background-color: white;
-    width: 70%;
-    height: 50%;
-    position: relative;
+    border: 3px solid rgb(0, 0, 0);
+    box-shadow: 4px 4px 1px rgb(212, 212, 212);
+    color: rgb(255, 252, 252);
     border-radius: 1em;
-    box-shadow: 0 0.188em 1.550em rgb(156, 156, 156);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    margin: 98px 318px;
+    padding: 15px 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.cover::before {
+    content: "";
+    background: url('./images/bg.login.jpeg') no-repeat center center/cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 110%;
+    width: 140%;
+    z-index: -2;
+    opacity: 0.95;
 }
 
 .alt-login {
@@ -43,52 +53,52 @@
     width: 47.5%;
     height: 90%;
     border-radius: 0.25em;
-    background-color: aqua;
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
     cursor: pointer;
+    margin: 5px 0px;
 }
-
-.google {
-    background-image: url("https://cdn.icon-icons.com/icons2/2351/PNG/512/logo_google_icon_143197.png");
-    z-index: 5;
-}
-.facebook {
-    background-image: url("https://www.bing.com/images/search?view=detailV2&ccid=OaHWiuwB&id=E71AF174B5A5A06FB0494229F49913970EE904A1&thid=OIP.OaHWiuwB46nOfArXuanGsgHaGp&mediaurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.39a1d68aec01e3a9ce7c0ad7b9a9c6b2%3frik%3doQTpDpcTmfQpQg%26riu%3dhttp%253a%252f%252fpluspng.com%252fimg-png%252ffacebook-logo-png-image-2335-1403.png%26ehk%3dA6gzMacsllFktQ3DwgKCwXCKBhdJNlpCydh%252bXl3VABQ%253d%26risl%3d%26pid%3dImgRaw%26r%3d0&exph=1258&expw=1403&q=facebook.png&simid=607990245192127600&FORM=IRPRST&ck=803E903F6B069AB6FEBEC4F38DACEC3A&selectedIndex=3");
-} 
 
 input {
     border: none;
-    background-color: rgb(229, 226, 226);
+    color: black;
+    background-color: rgb(248, 248, 248);
     width: 80%;
     border-radius: 0.25em;
     text-align: center;
-    padding: 2em;
-    font-size: 0.75em;
+    padding: 1em 1em;
+    margin: 1em 0em;
+    font-size: 1em;
 }
 
 input:focus {
-    outline-color: rgb(32, 177, 255);
+    outline-color: rgb(10, 10, 10);
 }
 
 .login-btn {
-    width: 40%;
+    width: 41%;
     height: 3em;
-    background-color: rgb(32, 177, 255);
+    color: black;
+    font-size: 1.2em;
+    background-color: rgb(244, 255, 34);
     display: flex;
     justify-content: center;
     align-items: center;
     transition: 0.5s;
     border-radius: 0.25em;
     cursor: pointer;
+    margin: 0.5em;
 }
 
-.login-btn:hover { transform: scale(1.25);}
+.login-btn:hover {
+    transform: scale(1.20);
+}
 
 .text {
     position: relative;
     bottom: 0.5%;
+    font-size: 20px;
 }
 
 .hide {
@@ -108,19 +118,28 @@ input:focus {
     background-color: black;
     color: white;
     bottom: 0;
-    transform: scale(1);
+    transform: scale(0.75);
     transition: 1.5s;
 }
 
-.blue {
+.googlelogin {
     width: 100%;
     height: 100%;
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-    /* background-image: url('../icons/google.png'); */
+    background-color: rgb(255, 255, 255);
+    background-image: url('./images/login.image.png');
 }
-
+.facebook{
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: rgb(249, 249, 249);
+    background-image: url('./images/facebook.logo.png');
+}
 /* -------------------- optimizing tablet -------------------- */
 @media only screen and (min-device-width: 37em) {
     .page {
