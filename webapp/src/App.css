@@ -8,14 +8,11 @@ div.nav {
 }
 
 div.navi {
+  display: flex;
+  flex-wrap: wrap;
   padding: 1vh;
   word-spacing: 1vw;
   font-size: 1vh;
-  background-image: url("https://th.bing.com/th/id/OIP.P3RCsEutAjthIKfbfLJ4dAHaGK?w=228&h=190&c=7&r=0&o=5&dpr=1.3&pid=1.7");
-  z-index: 5;
-  background-size: 10vh ;
-  background-repeat: no-repeat;
-  background-position-x: right;
 }
 
 button {

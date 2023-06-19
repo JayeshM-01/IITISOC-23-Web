@@ -20,11 +20,13 @@
     box-shadow: 4px 4px 1px rgb(212, 212, 212);
     color: rgb(255, 252, 252);
     border-radius: 1em;
+    width: 20rem;
+    height: 20rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    margin: 98px 318px;
+    margin: 15px auto;
     padding: 15px 10px;
     font-family: 'Courier New', Courier, monospace;
 }
@@ -32,7 +34,6 @@
 .cover::before {
     content: "";
     background: url('./images/bg.login.jpeg') no-repeat center center/cover;
-    background-repeat: no-repeat;
     position: absolute;
     top: 0;
     left: 0;
