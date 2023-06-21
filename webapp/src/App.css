@@ -83,3 +83,41 @@ h1 {
   text-align: center;
   font-size: 5vh;
 }
+
+@media only screen and (min-device-width: 700px) {
+  .show {
+    display: none;
+  }
+}
+
+@media only screen and (max-device-width: 700px) {
+  .navLinks {
+    display: none;
+  }
+  *{
+    margin: 0;
+    padding: 0;
+  }
+  .show{
+    display: inline-block;
+    color: aliceblue;
+    font-size: 3.5vh;
+  }
+  .ham {
+    margin: 0;
+    padding: 0;
+    width: 70px;
+    height: 50px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 45px;
+    cursor: pointer;
+  }
+  .extendedNavbar{
+    display: flexbox;
+    flex-direction: row;
+    background-color: #000000;
+    color: white;
+  }
+}
