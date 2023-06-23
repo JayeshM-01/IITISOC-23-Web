@@ -17,8 +17,8 @@
 
 .cover {
     border: 3px solid rgb(0, 0, 0);
-    box-shadow: 4px 4px 1px rgb(212, 212, 212);
-    color: rgb(255, 252, 252);
+    box-shadow: 4px 4px 1px rgb(218, 74, 86);
+    color: rgb(0, 0, 0);
     border-radius: 1em;
     width: 20rem;
     height: 20rem;
@@ -33,7 +33,7 @@
 
 .cover::before {
     content: "";
-    background: url('./images/bg.login.jpeg') no-repeat center center/cover;
+    background: url('https://images.hdqwalls.com/download/old-and-rich-zs-1920x1080.jpg') no-repeat center;
     position: absolute;
     top: 0;
     left: 0;
