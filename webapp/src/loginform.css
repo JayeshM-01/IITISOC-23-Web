@@ -3,7 +3,10 @@
     box-sizing: border-box;
     font-family: "CustomFont";
 }
-
+.loginname{
+    padding: 0;
+    margin: 0;
+}
 /* @font-face {
     font-family: "CustomFont";
    src: url("../fonts/RolexLight.woff2"); 

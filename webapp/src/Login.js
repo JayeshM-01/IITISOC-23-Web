@@ -35,7 +35,7 @@ export const Login = () => {
 
     return (
         <div className="cover">
-            <h1>Login/Sign up?</h1>
+            <h1 className="loginname">Login/Sign up?</h1>
             <input type="text" placeholder="username" />
             <input type="password" placeholder="password" />
 
