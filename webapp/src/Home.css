@@ -10,6 +10,7 @@
     text-align: center;
  }
  .maintext{
+    padding: 0 50px;
     width: 100%;
     display: block;
     font-size:2em;
@@ -27,7 +28,7 @@
         justify-content: center;
         position: absolute;
         left: 0;
-        height: 60%;
+        height: 28rem;
         width: 100%;
         z-index: -2;
         opacity: 0.7;
@@ -68,7 +69,7 @@
 }
 
 .bookheading{
-    /* width: 30rem; */
+    width: 100%;
     margin-top: 0em;
     text-align: center;
     font-size: 3rem;
@@ -77,12 +78,14 @@
     /* border-radius: 2em; */
 }
 .step{
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 .steps{
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     margin: 1em;

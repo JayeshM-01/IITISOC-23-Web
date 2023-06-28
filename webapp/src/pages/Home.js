@@ -29,7 +29,7 @@ export const Home = () => {
   return (
     <div className="App">
       <div className="homebgcss"><div className='maincontent'><div className="maintext">
-      Counselling is just like therapy which allows people to speak out what is in their mind without having a feeling of being judged or commented on.Knowing yourself is one of the hardest and important things to attain to lead a peaceful and successful life. We can help you realize your true worth and potential.</div></div>
+      Knowing yourself is one of the hardest and important things to attain to lead a peaceful and successful life. We can help you realize your true worth and potential.</div></div>
       <button className="mainbutton">Counsellers</button>
       </div>
 
