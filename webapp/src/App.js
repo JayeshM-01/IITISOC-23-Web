@@ -4,12 +4,16 @@ import { Home } from "./pages/Home";
 import { Menu } from "./pages/Menu";
 import { Contact } from "./pages/Contact";
 import { Login } from "./Login";
+import {Navbar} from "./Navbar"
 
 
 function App() {
   return (
     <div className="App">
-      <Router>        
+      <Router> 
+        <div className="nav">
+        < Navbar/> 
+        </div>      
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/menu" element={<Menu />} />
