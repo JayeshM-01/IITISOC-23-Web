@@ -4,7 +4,8 @@ import { Home } from "./pages/Home";
 import { Menu } from "./pages/Menu";
 import { Contact } from "./pages/Contact";
 import { Login } from "./Login";
-import {Navbar} from "./Navbar"
+import {Navbar} from "./Navbar";
+import { Registeration } from "./Register";
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Route path="/menu" element={<Menu />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Registeration />} />
           <Route path="*" element={<h1> PAGE NOT FOUND</h1>} />
         </Routes>
       </Router>
