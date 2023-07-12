@@ -2,6 +2,7 @@ import { useState,React  } from "react";
 import "./loginform.css";
 import { useNavigate } from "react-router-dom";
 import Axios from "axios";
+import { Navbar } from "./Navbar";
 
 
 export const Registeration = () => {
@@ -19,9 +20,13 @@ export const Registeration = () => {
     };
 
     return ( 
+      <div>
+      <div className="nav-none">
+      < Navbar/> 
+      </div>
       <div className="cover">
         <div className="registration">
-          <h1>Registration</h1>
+          <h2>Registration</h2>
           <label>Username</label>
           <input
             type="text"
@@ -37,6 +42,7 @@ export const Registeration = () => {
             }}
           />
           <button onClick={register}> Register </button>
+        </div>
         </div>
         </div>);
 }

@@ -2,6 +2,10 @@ div.nav {
   background-image: linear-gradient(to right, rgb(253, 99, 99),rgb(250, 152, 125));
 }
 
+.nav-none {
+  background-image: none;
+}
+
 div.navi {
   display: flex;
   flex-wrap: wrap;
@@ -96,13 +100,16 @@ h1 {
   object-fit: cover;
 }
 
-@media only screen and (min-device-width: 700px) {
+@media only screen and (min-device-width: 1000px) {
   .show {
     display: none;
   }
+  .after-login{
+    font-size: 30px;
+  }
 }
 
-@media only screen and (max-device-width: 700px) {
+@media only screen and (max-device-width: 1000px) {
   .navLinks {
     display: none;
   }

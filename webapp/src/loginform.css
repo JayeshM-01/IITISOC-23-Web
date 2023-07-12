@@ -3,6 +3,16 @@
     box-sizing: border-box;
     font-family: "CustomFont";
 }
+
+h2 {
+    margin-bottom: 15px;
+    font-size: 50px;
+}
+h4 {
+    color: black;
+    font-size: 20px;
+}
+
 .loginname{
     padding: 0;
     margin: 0;
@@ -21,7 +31,7 @@
 .cover {
     text-align: center;
     border: 3px solid rgb(0, 0, 0);
-    box-shadow: 4px 4px 1px rgb(218, 74, 86);
+    box-shadow: 4px 4px 1px rgb(209, 92, 199);
     color: rgb(0, 0, 0);
     border-radius: 1em;
     width: 20rem;
@@ -37,7 +47,7 @@
 
 .cover::before {
     content: "";
-    background: url('https://images.hdqwalls.com/download/old-and-rich-zs-1920x1080.jpg') no-repeat center;
+    background: url('https://th.bing.com/th/id/R.41856f4427be367ddb6e11c82d18e820?rik=yUEQJPW8rUMMeg&riu=http%3a%2f%2fthewowstyle.com%2fwp-content%2fuploads%2f2015%2f04%2fspring-desktop-backgrounds-hd.jpg&ehk=M5%2fhPe46%2fTW5lRyW2W8jGJg%2fHd3jgdfFgKRVBB%2beDLo%3d&risl=&pid=ImgRaw&r=0') no-repeat center;
     position: absolute;
     top: 0;
     left: 0;

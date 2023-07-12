@@ -2,6 +2,7 @@ import "./loginform.css";
 import { useState,useEffect} from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Axios from "axios";
+import {Navbar} from "./Navbar";
 
 
 
@@ -30,14 +31,20 @@ export const Login = () => {
         Axios.get("http://localhost:3001/login").then((response) => {
           if (response.data.loggedIn === true) {
             setLoginStatus(response.data.user[0].username);
+          } else{
+            setLoginStatus("");
           }
         });
       }, []);
 
     return (
+      <div>
+      <div className="nav-none">
+      < Navbar/> 
+      </div>
         <div className="cover">
             <div className="login">
-            <h1>Login</h1>
+            <h2>Login</h2>
             <input
               type="text"
               placeholder="Username..."
@@ -57,8 +64,9 @@ export const Login = () => {
           </div>
           
     
-          <h1>{loginStatus}</h1>
+          <h3>{loginStatus}</h3>
             
+        </div>
         </div>
     )
 }

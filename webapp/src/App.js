@@ -4,17 +4,13 @@ import { Home } from "./pages/Home";
 import { Menu } from "./pages/Menu";
 import { Contact } from "./pages/Contact";
 import { Login } from "./Login";
-import {Navbar} from "./Navbar";
 import { Registeration } from "./Register";
 
 
 function App() {
   return (
     <div className="App">
-      <Router> 
-        <div className="nav">
-        < Navbar/> 
-        </div>      
+      <Router>       
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/menu" element={<Menu />} />

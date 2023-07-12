@@ -15,7 +15,7 @@ app.use(express.json());
 app.use(
   cors({
     origin: ["http://localhost:3000"],
-    methods: ["GET", "POST"],
+    methods: ["GET", "POST"," DELETE"],
     credentials: true,
   })
 );
@@ -36,7 +36,7 @@ app.use(
     resave: false,
     saveUninitialized: false,
     cookie: {
-      expires: 60 * 60 * 24,
+      expires: 1000 * 60 * 60 * 24,
     },
   })
 );
@@ -97,6 +97,20 @@ app.post("/login", (req, res) => {
   );
 });
 
+app.delete("/logout", (req, res) => {
+  if (req.session) {
+    req.session.destroy(err => {
+      if (err) {
+        res.status(400).send('Unable to log out')
+      } else {
+        console.log('Logout successful');
+        res.send({ loggedIn: false });
+      }
+    });
+  } else {
+    res.end()
+  }
+});
 
 app.post("/create", (req, res) => {
   const name = req.body.name;

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Axios from "axios";
+import { Navbar } from "../Navbar";
 
 export const Contact = () => {
   const [name, setName] = useState("");
@@ -44,7 +45,7 @@ export const Contact = () => {
       (response) => {
         setEmployeeList(
           employeeList.map((val) => {
-            return val.id == id
+            return val.id === id
               ? {
                   id: val.id,
                   name: val.name,
@@ -64,7 +65,7 @@ export const Contact = () => {
     Axios.delete(`http://localhost:3001/delete/${id}`).then((response) => {
       setEmployeeList(
         employeeList.filter((val) => {
-          return val.id != id;
+          return val.id !== id;
         })
       );
     });
@@ -72,6 +73,9 @@ export const Contact = () => {
 
   return (
     <div className="App">
+      <div className="nav">
+        < Navbar/> 
+        </div>
       <div className="information">
         <label>Name:</label>
         <input
