@@ -42,17 +42,18 @@ export const Login = () => {
       <div className="nav-none">
       < Navbar/> 
       </div>
+      <div className="box">
         <div className="cover">
-            <div className="login">
-            <h2>Login</h2>
-            <input
+            <div className="login ">
+            <h2 className="h2tag">Login</h2>
+            <input className="input"
               type="text"
               placeholder="Username..."
               onChange={(e) => {
                 setUsername(e.target.value);
               }}
             />
-            <input
+            <input className="input"
               type="password"
               placeholder="Password..."
               onChange={(e) => {
@@ -66,6 +67,7 @@ export const Login = () => {
     
           <h3>{loginStatus}</h3>
             
+        </div>
         </div>
         </div>
     )

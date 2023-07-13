@@ -20,13 +20,14 @@ export const Registeration = () => {
     };
 
     return ( 
-      <div>
+      <div >
       <div className="nav-none">
       < Navbar/> 
       </div>
+      <div className="box">
       <div className="cover">
         <div className="registration">
-          <h2>Registration</h2>
+          <h2 className="h2tag">Registration</h2>
           <label>Username</label>
           <input
             type="text"
@@ -42,6 +43,7 @@ export const Registeration = () => {
             }}
           />
           <button onClick={register}> Register </button>
+        </div>
         </div>
         </div>
         </div>);

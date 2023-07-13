@@ -34,7 +34,7 @@ export const Navbar = () => {
   };
 
   return (
-    <div>
+    <div className="text">
     <div className="navi" >
       <div className="navLinks">
       <Link to="/"> <button className="active"> Home </button></Link>
@@ -49,9 +49,9 @@ export const Navbar = () => {
     <hr></hr>
     <div><Link to="/"> <button className="active"> Home </button></Link></div>
     <hr></hr>
-    <div><Link to="/menu"><button> Counsellors </button></Link></div>
+    <div><Link to="/menu"><button className="active"> Counsellors </button></Link></div>
     <hr></hr>
-    <div><Link to="/contact"><button> Contact </button></Link></div>
+    <div><Link to="/contact"><button className="active"> Contact </button></Link></div>
     <hr></hr>
     <div>
     {!userPresent && (<Link to="/login"><button className="active"> Login </button></Link>)}

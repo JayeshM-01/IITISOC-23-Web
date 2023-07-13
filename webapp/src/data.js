@@ -35,7 +35,7 @@ export const responsive = {
         "https://images.pexels.com/photos/5490276/pexels-photo-5490276.jpeg?auto=compress&cs=tinysrgb&w=600",
       name: "Henry",
       price: "$21.99",
-      description: "Mental Health Counseling",
+      description: "    Mental Health Counseling      ",
     },
     {
       id: 3,

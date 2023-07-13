@@ -4,28 +4,24 @@
     font-family: "CustomFont";
 }
 
-h2 {
-    margin-bottom: 15px;
-    font-size: 50px;
+.h2tag {
+    padding: 10px;
+    padding-bottom: 20px;
 }
-h4 {
-    color: black;
-    font-size: 20px;
+
+label{
+    padding: 10px;
+}
+.input {
+    margin: 10px;
+}
+.box{
+    margin-top: 50px;
 }
 
 .loginname{
     padding: 0;
     margin: 0;
-}
-/* @font-face {
-    font-family: "CustomFont";
-   src: url("../fonts/RolexLight.woff2"); 
-}*/
-
-/* --------------------------- for mobile ------------------------------ */
-.page {
-    display: flex;
-    font-size: 0.75em;
 }
 
 .cover {
@@ -34,8 +30,8 @@ h4 {
     box-shadow: 4px 4px 1px rgb(209, 92, 199);
     color: rgb(0, 0, 0);
     border-radius: 1em;
-    width: 20rem;
-    height: 20rem;
+    width: 25rem;
+    height: 23rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -67,26 +63,3 @@ h4 {
     width: 250px;
     height: 40px;
   }
-/* -------------------- optimizing tablet -------------------- */
-@media only screen and (min-device-width: 37em) {
-    .page {
-        font-size: 1em;
-    }
-
-    .cover {
-        width: 60%;
-        height: 70%;
-    }
-}
-
-/* -------------------- optimizing desktop-------------------- */
-@media only screen and (min-device-width: 64em) {
-    .page {
-        font-size: 1.25em;
-    }
-
-    .cover {
-        width: 25%;
-        height: 65%;
-    }
-}
