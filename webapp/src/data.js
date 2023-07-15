@@ -19,7 +19,7 @@ export const responsive = {
       slidesToSlide: 1
     },
   };
-  
+
   export const productData = [
     {
       id: 1,
@@ -28,6 +28,7 @@ export const responsive = {
       name: "Lucas",
       price: "$19.99",
       description: "Counselor Education and Supervision",
+      movetopage:"http://localhost:3000/lucas",
     },
     {
       id: 2,
@@ -36,6 +37,7 @@ export const responsive = {
       name: "Henry",
       price: "$21.99",
       description: "    Mental Health Counseling      ",
+      movetopage:"/henry",
     },
     {
       id: 3,
@@ -44,6 +46,7 @@ export const responsive = {
       name: "Agatha",
       price: "$99.99",
       description: "Community Counseling",
+      movetopage:"/agastha",
     },
     {
       id: 4,
@@ -52,6 +55,7 @@ export const responsive = {
       name: "Alexander",
       price: "$14.99",
       description: "Rehabilitation Counseling",
+      movetopage:"/alexander",
     },
     {
       id: 5,
@@ -60,6 +64,7 @@ export const responsive = {
       name: "Ethan",
       price: "$38.99",
       description: "Career Counseling",
+      movetopage:"/ethan",
     },
     {
       id: 6,
@@ -68,6 +73,7 @@ export const responsive = {
       name: "Charlotte",
       price: "$149.99",
       description: "Addiction Counseling",
+      movetopage:"/charlotte",
     },
     {
       id: 7,
@@ -76,6 +82,7 @@ export const responsive = {
       name: "Oliver",
       price: "$38.99",
       description: "Family Counseling",
+      movetopage:"/oliver",
     },
     {
       id: 8,
@@ -83,6 +90,7 @@ export const responsive = {
         "https://images.pexels.com/photos/3796217/pexels-photo-3796217.jpeg?auto=compress&cs=tinysrgb&w=600",
       name: "Hazel",
       price: "$49.99",
-      description: "Student Affairs College Counseling"
+      description: "Student Affairs College Counseling",
+      movetopage:"/hazel",
     },
   ];
