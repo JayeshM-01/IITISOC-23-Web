@@ -2,8 +2,6 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import Product from "../Product.js";
 import { productData, responsive } from "../data";
-import {FaYoutube, FaTwitter , FaInstagram } from 'react-icons/fa';
-import {BiSolidMap, BiPhoneCall, BiEnvelope} from 'react-icons/bi';
 import "../Home.css";
 import { Navbar } from '../Navbar.js';
 import { Footer } from '../components/Footer.js';
