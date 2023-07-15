@@ -42,7 +42,7 @@ export const Navbar = () => {
       <Link to="/contact"><button className="active"> Contact </button></Link>
       {!userPresent && (<Link to="/login"><button className="right-side active"> Login </button></Link>)}
       {userPresent && (<Link to="/login"><button className="right-side active" onClick={logout}> Logout </button></Link>)}
-      {userPresent && (<span className="after-login right-side" >{username}</span>)}
+      {userPresent && (<button className="after-login right-side" onClick={() => navigate('/userpage')}>{username}</button>)}
       </div><div className="show"><button className="ham" onClick={() => showNavbar()}>{ extendNav ? <>&#10005;</> : <> &#8801;</>}</button></div>
     </div>
     {extendNav && (<div id="shown" className= {extendNav ? "extendedNavbar" : ""}>
