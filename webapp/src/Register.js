@@ -42,7 +42,7 @@ export const Registeration = () => {
               setPasswordReg(e.target.value);
             }}
           />
-          <button onClick={register}> Register </button>
+          <button className="reglog" onClick={register}> Register </button>
         </div>
         </div>
         </div>

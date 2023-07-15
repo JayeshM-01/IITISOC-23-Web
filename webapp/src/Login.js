@@ -61,7 +61,7 @@ export const Login = () => {
               }}
             />
             <Link to="/register">Register </Link>
-            <button onClick={login}> Login </button>
+            <button className="reglog" onClick={login}> Login </button>
           </div>
           
     

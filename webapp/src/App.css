@@ -14,7 +14,7 @@ div.navi {
   font-size: 1vh;
 }
 
-button , .active {
+.active ,.reglog {
   background-color: transparent; 
   border: white ;
   color: rgb(0, 0, 0);
@@ -26,12 +26,12 @@ button , .active {
   cursor: pointer;
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
-button:hover , .active:hover{
+.active:hover ,.reglog:hover{
   background-color: rgb(0, 0, 0);
   border-radius: 10vh;
   color: rgb(255, 255, 255);
 }
-button:active , .active:active{
+.active:active , .reglog:active{
   color: #000000;
   text-decoration: underline;
 }
@@ -208,7 +208,7 @@ input {
   height: 50px;
 }
 
- button {
+ .reglog {
   width: 200px;
   height: 50px;
   margin-top: 15px;
@@ -241,4 +241,11 @@ input {
 
 .h2tag {
   font-size: 30px;
+}
+
+#datepicker-toggle-382904 {
+  width: min-content;
+}
+.relative {
+  margin-bottom: 5px;
 }
