@@ -3,7 +3,6 @@ import React from "react";
 import "../App.css";
 import { Footer } from "../components/Footer";
 import { Date } from "../components/Date-time";
-import { Time } from "../components/Time2";
 
 export const Menu = () => {
   const style2 = {
@@ -54,13 +53,7 @@ export const Menu = () => {
                 and so on.
               </p>
 
-              <div className="pt-12 pb-8">
-                <Date/>
-                <Time/>
-                <button className="bg-green-700 hover:bg-green-900 text-white font-bold py-2 px-4 rounded-full">
-                  Book Appointment
-                </button>
-              </div>
+              <Date/>
 
               {/* <!-- Use https://simpleicons.org/ to find the svg for your preferred product -->  */}
             </div>
