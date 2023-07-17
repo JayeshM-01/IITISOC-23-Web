@@ -5,6 +5,7 @@ import { productData, responsive } from "../data";
 import "../Home.css";
 import { Navbar } from '../Navbar.js';
 import { Footer } from '../components/Footer.js';
+import {Review} from "../components/Testimonials.js";
 
 export const Home = () => {
   
@@ -70,7 +71,7 @@ export const Home = () => {
   </div>
 </div>
   
-
+    <Review/>
 
     <Footer/>
     </div>
