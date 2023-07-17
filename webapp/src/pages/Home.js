@@ -14,6 +14,7 @@ export const Home = () => {
       url={item.imageurl}
       price={item.price}
       description={item.description}
+      movetopage={item.movetopage}
     />
   ));
   

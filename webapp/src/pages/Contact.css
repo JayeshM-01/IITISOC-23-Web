@@ -1,0 +1,98 @@
+.contact-us{
+    display: flex;
+    flex-direction: row;
+    height: 70vh;
+    justify-content: center;
+}
+
+.c-information{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: fit-content;
+    border-radius: 5px;
+    width:auto;
+    background-color: #b4b4b4;
+    margin:50px 50px;
+    padding: 1em;
+    box-shadow: 11px 16px 20px 6px #474747;
+    /* border: 2px solid black; */
+}
+.contact-us::before{
+    content: "";
+    background: url('https://images.pexels.com/photos/276514/pexels-photo-276514.jpeg') no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 90%;
+    width: 100%;
+    z-index: -2;
+    opacity: 0.98;
+}
+.c-formheading{
+    margin-bottom: 10px;
+}
+.c-main-lable{
+    display: flex;
+    flex-wrap: wrap;
+}
+.c-lable{
+   display: flex;
+   flex-direction: column;
+   font-size: 1.3rem;
+   padding-top: 1em;
+   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+.c-input{
+    font-size: 1.3rem;
+    border: 2px solid rgb(141, 141, 141);
+    height: 3rem;
+    width: 85%;
+    padding-left: 6px;
+    border-radius: .3em;
+}
+.c-lable-msg{
+   font-size: 1.3rem;
+   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   padding-top: 1em;
+}
+.c-input-msg{
+    display: flex;
+    padding: 4px;
+    flex-direction: column;
+    font-size: 1.3rem;
+    border: 2px solid rgb(157, 157, 157);
+    height: 8rem;
+    width: 92%;
+    margin: 2px;
+    border-radius: .3em;
+}
+.c-submit{
+    font-weight:200;
+    width: 6rem;
+    margin: 10px 6px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: rgb(242, 255, 0);
+    font-size: 1.7em;
+    height: 3rem;
+    padding: 0px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.c-submit:hover{
+    background-color: rgb(227, 248, 0);
+    transform: scale(1.10);
+    cursor: pointer;
+    color: black;
+    border-radius: 4px;
+}
+.c-heading{
+   border: none;
+   height: 34px;
+   padding: 2px;
+   font-size: 29px;
+   border-radius: 5px;
+   width: 94%;
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   background-color:rgb(118 118 118);
+}

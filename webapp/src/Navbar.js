@@ -40,9 +40,9 @@ export const Navbar = () => {
       <Link to="/"> <button className="active"> Home </button></Link>
       <Link to="/menu"><button className="active"> Counsellors </button></Link>
       <Link to="/contact"><button className="active"> Contact </button></Link>
-      {!userPresent && (<Link to="/login"><button className="right-side active"> Login </button></Link>)}
-      {userPresent && (<Link to="/login"><button className="right-side active" onClick={logout}> Logout </button></Link>)}
-      {userPresent && (<button className="after-login right-side" onClick={() => navigate('/userpage')}>{username}</button>)}
+      {!userPresent && (<Link to="/login"><button className="right-side active rightpos"> Login </button></Link>)}
+      {userPresent && (<Link to="/login"><button className="right-side active rightpos" onClick={logout}> Logout </button></Link>)}
+      {userPresent && (<button className="after-login right-side rightpos" onClick={() => navigate('/userpage')}>{username}</button>)}
       </div><div className="show"><button className="ham" onClick={() => showNavbar()}>{ extendNav ? <>&#10005;</> : <> &#8801;</>}</button></div>
     </div>
     {extendNav && (<div id="shown" className= {extendNav ? "extendedNavbar" : ""}>

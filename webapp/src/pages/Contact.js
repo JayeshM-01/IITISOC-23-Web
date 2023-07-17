@@ -1,161 +1,85 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Axios from "axios";
+import "../pages/Contact.css";
 import { Navbar } from "../Navbar";
+import {Footer}  from "../components/Footer"
 
 export const Contact = () => {
   const [name, setName] = useState("");
-  const [age, setAge] = useState(0);
-  const [country, setCountry] = useState("");
-  const [position, setPosition] = useState("");
-  const [wage, setWage] = useState(0);
+  const [Email, setEmail] = useState("");
+  const [msg, setMsg] = useState("");
 
-  const [newWage, setNewWage] = useState(0);
+  const [msgList, setmsgList] = useState([]);
 
-  const [employeeList, setEmployeeList] = useState([]);
-
-  const addEmployee = () => {
+  const addqueries = () => {
     Axios.post("http://localhost:3001/create", {
       name: name,
-      age: age,
-      country: country,
-      position: position,
-      wage: wage,
+      Email: Email,
+      msg: msg,
     }).then(() => {
-      setEmployeeList([
-        ...employeeList,
+      setmsgList([
+        ...msgList,
         {
           name: name,
-          age: age,
-          country: country,
-          position: position,
-          wage: wage,
+          Email: Email,
+          msg: msg,
         },
       ]);
     });
   };
 
-  const getEmployees = () => {
-    Axios.get("http://localhost:3001/employees").then((response) => {
-      setEmployeeList(response.data);
+  useEffect( () => {
+    Axios.get("http://localhost:3001/msg").then((response) => {
+      setmsgList(response.data);
     });
-  };
-
-  const updateEmployeeWage = (id) => {
-    Axios.put("http://localhost:3001/update", { wage: newWage, id: id }).then(
-      (response) => {
-        setEmployeeList(
-          employeeList.map((val) => {
-            return val.id === id
-              ? {
-                  id: val.id,
-                  name: val.name,
-                  country: val.country,
-                  age: val.age,
-                  position: val.position,
-                  wage: newWage,
-                }
-              : val;
-          })
-        );
-      }
-    );
-  };
-
-  const deleteEmployee = (id) => {
-    Axios.delete(`http://localhost:3001/delete/${id}`).then((response) => {
-      setEmployeeList(
-        employeeList.filter((val) => {
-          return val.id !== id;
-        })
-      );
-    });
-  };
+  },[]);
 
   return (
-    <div className="App">
-      <div className="nav">
-        < Navbar/> 
-        </div>
-      <div className="information">
-        <label>Name:</label>
+    <div>
+
+    <div className="nav">
+       < Navbar/> 
+     </div>
+  
+    <div className="contact-us">
+      <div className="c-information">
+        <h2 className="c-heading">Contact Us</h2>
+        <div className="c-main-lable">
+        <label className="c-lable">Full Name
         <input
+          className="c-input"
+          placeholder="eg. raja"
           type="text"
           onChange={(event) => {
             setName(event.target.value);
           }}
-        />
-        <label>Age:</label>
+          />
+        </label>
+        <label className="c-lable">Email
         <input
-          type="number"
+          className="c-input"
+          placeholder="eg. help@gmail.com"
+          type="Email"
           onChange={(event) => {
-            setAge(event.target.value);
+            setEmail(event.target.value);
           }}
-        />
-        <label>Country:</label>
-        <input
+          />
+        </label>
+          </div>
+        <label className="c-lable-msg">Explain Queries
+        <textarea
+          className="c-input-msg"
+          placeholder="please clear your dout"
           type="text"
           onChange={(event) => {
-            setCountry(event.target.value);
-          }}
-        />
-        <label>Position:</label>
-        <input
-          type="text"
-          onChange={(event) => {
-            setPosition(event.target.value);
-          }}
-        />
-        <label>Wage (year):</label>
-        <input
-          type="number"
-          onChange={(event) => {
-            setWage(event.target.value);
-          }}
-        />
-        <button onClick={addEmployee}>Add Employee</button>
-      </div>
-      <div className="employees">
-        <button onClick={getEmployees}>Show Employees</button>
+            setMsg(event.target.value);
+          }}/>
+        </label>
+        <button onClick={addqueries} className="c-submit">Send</button>
+      </div>  
+    </div>
+  <Footer/>
 
-        {employeeList.map((val, key) => {
-          return (
-            <div className="employee">
-              <div>
-                <h3>Name: {val.name}</h3>
-                <h3>Age: {val.age}</h3>
-                <h3>Country: {val.country}</h3>
-                <h3>Position: {val.position}</h3>
-                <h3>Wage: {val.wage}</h3>
-              </div>
-              <div>
-                <input
-                  type="text"
-                  placeholder="2000..."
-                  onChange={(event) => {
-                    setNewWage(event.target.value);
-                  }}
-                />
-                <button
-                  onClick={() => {
-                    updateEmployeeWage(val.id);
-                  }}
-                >
-                  {" "}
-                  Update
-                </button>
-
-                <button
-                  onClick={() => {
-                    deleteEmployee(val.id);
-                  }}
-                >
-                  Delete
-                </button>
-              </div>
-            </div>
-          );
-        })}
-      </div>
     </div>
   );
   };

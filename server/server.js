@@ -25,7 +25,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const db = mysql.createConnection({
   user: "root",
   host: "localhost",
-  password: "Raja@5649",
+  password: "",
   database: "employeesystem",
 });
 
@@ -114,14 +114,12 @@ app.delete("/logout", (req, res) => {
 
 app.post("/create", (req, res) => {
   const name = req.body.name;
-  const age = req.body.age;
-  const country = req.body.country;
-  const position = req.body.position;
-  const wage = req.body.wage;
+  const Email = req.body.Email;
+  const msg = req.body.msg;
 
   db.query(
-    "INSERT INTO employees (name, age, country, position, wage) VALUES (?,?,?,?,?)",
-    [name, age, country, position, wage],
+    "INSERT INTO queries (name, Email, msg) VALUES (?,?,?)",
+    [name, Email, msg],
     (err, result) => {
       if (err) {
         console.log(err);
@@ -132,8 +130,8 @@ app.post("/create", (req, res) => {
   );
 });
 
-app.get("/employees", (req, res) => {
-  db.query("SELECT * FROM employees", (err, result) => {
+app.get("/msg", (req, res) => {
+  db.query("SELECT * FROM queries", (err, result) => {
     if (err) {
       console.log(err);
     } else {
@@ -142,9 +140,10 @@ app.get("/employees", (req, res) => {
   });
 });
 
+
 app.delete("/delete/:id", (req, res) => {
   const id = req.params.id;
-  db.query("DELETE FROM employees WHERE id = ?", id, (err, result) => {
+  db.query("DELETE FROM queries WHERE id = ?", id, (err, result) => {
     if (err) {
       console.log(err);
     } else {

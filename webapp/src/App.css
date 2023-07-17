@@ -6,8 +6,14 @@ div.nav {
   background-image: none;
 }
 
+/* .rightpos {
+  display: flex;
+  align-items: flex-end;
+} */
+
 div.navi {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   padding: 1vh;
   word-spacing: 1vw;
