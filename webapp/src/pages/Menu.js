@@ -16,8 +16,6 @@ export const Menu = () => {
         <Navbar />
       </div>
 
-
-
       <div className="font-sans antialiased text-gray-900 leading-normal tracking-wider bg-cover">
         <div className="max-w-4xl flex items-center h-auto lg:h-screen flex-wrap mx-auto my-32 lg:my-0">
           {/* <!--Main Col--> */}

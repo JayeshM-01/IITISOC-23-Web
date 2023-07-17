@@ -4,8 +4,6 @@ import { Link, useNavigate } from "react-router-dom";
 import Axios from "axios";
 import {Navbar} from "./Navbar";
 
-
-
 export const Login = () => {
     const [loginStatus, setLoginStatus] = useState("");
     const [username, setUsername] = useState("");
