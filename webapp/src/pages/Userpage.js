@@ -2,6 +2,7 @@ import { Navbar } from "../Navbar";
 import { useEffect, useState } from "react";
 import Axios from "axios";
 import "../pages/menu.css";
+import {Footer} from "../components/Footer";
 
 export const Userpage = () => {
   const [d, setd] = useState([]);
@@ -36,9 +37,9 @@ export const Userpage = () => {
 
         {/* :TABLE HEAD */}
         <thead className="min-w-full bg-gray-100 text-left text-gray-700">
-          <tr>
+          <tr class="border-b border-info-200 bg-info-100 text-neutral-800 ">
             {/* ::Name */}
-            <th className="py-3 px-4 text-sm font-medium uppercase tracking-wide" scope="col">Counsellor Name</th>
+            <th className="py-3 px-4 text-sm font-medium uppercase tracking-wide" scope="col">Name</th>
             {/* ::Job Title */}
             <th className="py-3 px-4 text-sm font-medium uppercase tracking-wide" scope="col">Date</th>
             {/* ::Email */}
@@ -51,8 +52,8 @@ export const Userpage = () => {
         <tbody className="">
         {d.map((val, key) => {
           if(val.name===n){
-            return (<div>
-              <tr >
+            return (
+              <tr class="border-b transition duration-300 ease-in-out hover:bg-neutral-100 dark:border-neutral-500 dark:hover:bg-neutral-600">
               {/* ::User Name */}
               <td className="py-3 px-4 text-base text-gray-700 font-semibold">{val.name}</td>
               {/* ::User Job Title */}
@@ -60,7 +61,7 @@ export const Userpage = () => {
               {/* ::User Email */}
               <td className="py-3 px-4 text-base text-gray-500 font-medium">{val.time}</td>
             </tr>
-            </div>
+
             );
           }
         })}
@@ -74,7 +75,8 @@ export const Userpage = () => {
 
 
 
-      </div>  
+      </div> 
+      <Footer/> 
     </div>
 
     );

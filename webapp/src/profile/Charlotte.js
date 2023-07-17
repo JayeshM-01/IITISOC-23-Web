@@ -1,5 +1,6 @@
 import { Navbar } from "../Navbar";
 import { Footer } from "../components/Footer";
+import { Date } from "../components/Date-time";
 
 export const Charlotte = () => {
   const style2 = {
@@ -46,11 +47,7 @@ export const Charlotte = () => {
                 healthier, more fulfilling lives.
               </p>
 
-              <div class="pt-12 pb-8">
-                <button class="bg-green-700 hover:bg-green-900 text-white font-bold py-2 px-4 rounded-full">
-                  Book Appointment
-                </button>
-              </div>
+              <Date/>
 
               {/* <!-- Use https://simpleicons.org/ to find the svg for your preferred product -->  */}
             </div>

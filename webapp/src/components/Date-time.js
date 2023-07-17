@@ -107,7 +107,7 @@ export const Date = () => {
           </label>
         </div>
 
-        <button onClick={appont} className="bg-green-700 hover:bg-green-900 text-white font-bold py-2 px-4 rounded-full">
+        <button onClick={appont} className="bg-green-700 hover:bg-green-900 text-white font-bold py-2 px-4 rounded-full max-w-[50%]">
           Book Appointment
         </button>
       </div>
