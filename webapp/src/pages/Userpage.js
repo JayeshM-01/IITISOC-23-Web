@@ -3,11 +3,24 @@ import { useEffect, useState } from "react";
 import Axios from "axios";
 import "../pages/menu.css";
 import {Footer} from "../components/Footer";
+import {Useruserpage} from "./Useruserpage";
+import { Adminuserpage } from "./Adminuserpage";
 
 export const Userpage = () => {
   const [d, setd] = useState([]);
   const [n, setn] = useState([]);
-  
+  const [role,setRole] = useState("");
+
+
+  useEffect(() => {
+    Axios.get("http://localhost:3001/login").then((response) => {
+      if (response.data.loggedIn === true) {
+        setRole(response.data.user[0].role);
+      } else {
+        setRole("");
+      }
+    });
+  },[]);
   
   useEffect( () => {
     Axios.get("http://localhost:3001/getdt").then((response) => {
@@ -24,59 +37,10 @@ export const Userpage = () => {
   },[])
    
     return (
+
     <div>
-     <div className="nav-none">
-       < Navbar/> 
-     </div>
-     <div className="consellers">
-     <h2 className="h-mainheading">HISTORY</h2>
-      <div className="c-querie">
-        
-      <div className="mx-auto pb-8 w-full max-w-7xl overflow-x-auto">
-      <table className="px-4 min-w-full rounded-md border border-gray-200 overflow-hidden">
-
-        {/* :TABLE HEAD */}
-        <thead className="min-w-full bg-gray-100 text-left text-gray-700">
-          <tr class="border-b border-info-200 bg-info-100 text-neutral-800 ">
-            {/* ::Name */}
-            <th className="py-3 px-4 text-sm font-medium uppercase tracking-wide" scope="col">Name</th>
-            {/* ::Job Title */}
-            <th className="py-3 px-4 text-sm font-medium uppercase tracking-wide" scope="col">Date</th>
-            {/* ::Email */}
-            <th className="py-3 px-4 text-sm font-medium uppercase tracking-wide" scope="col">Time</th>
-          </tr>
-        </thead>
-
-
-        {/* :TABLE BODY */}
-        <tbody className="">
-        {d.map((val, key) => {
-          if(val.name===n){
-            return (
-              <tr class="border-b transition duration-300 ease-in-out hover:bg-neutral-100 dark:border-neutral-500 dark:hover:bg-neutral-600">
-              {/* ::User Name */}
-              <td className="py-3 px-4 text-base text-gray-700 font-semibold">{val.name}</td>
-              {/* ::User Job Title */}
-              <td className="py-3 px-4 text-base text-gray-500 font-medium">{val.date}</td>
-              {/* ::User Email */}
-              <td className="py-3 px-4 text-base text-gray-500 font-medium">{val.time}</td>
-            </tr>
-
-            );
-          }
-        })}
-        </tbody>
-
-</table>
-</div>
-
-
-      </div> 
-
-
-
-      </div> 
-      <Footer/> 
+    {role === null && <Useruserpage/>}
+    {role === "admin" && <Adminuserpage/>}
     </div>
 
     );
