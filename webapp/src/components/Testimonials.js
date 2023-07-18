@@ -59,9 +59,7 @@ export const Review = () => {
               </li>
             </ul>
             <p>
-              Ut pretium ultricies dignissim. Sed sit amet mi eget urna
-              placerat vulputate. Ut vulputate est non quam dignissim
-              elementum. Donec a ullamcorper diam.
+The counseling I received through this appointment system was life-changing. The counselor's empathy and understanding created a safe space where I could openly discuss my anxiety and depression. Their effective techniques and guidance helped me manage my symptoms and regain a sense of calm. I highly recommend this service for anyone seeking support and positive change.
             </p>
           </div>
         </div>
@@ -120,9 +118,7 @@ export const Review = () => {
               </li>
             </ul>
             <p>
-              At vero eos et accusamus et iusto odio dignissimos ducimus qui
-              blanditiis praesentium accusamus contestatur voluptatum
-              deleniti atque corrupti.
+Words cannot express my gratitude for the counseling I received through this website. During a difficult time, their support and guidance provided a lifeline for my mental health. Through their expertise, I gained valuable tools to navigate my challenges, rebuilt my self-confidence, and discovered hope. Thanks to their dedicated counseling, I emerged stronger, forever grateful for the positive impact it had on my life.
             </p>
           </div>
         </div>
@@ -181,9 +177,7 @@ export const Review = () => {
               </li>
             </ul>
             <p>
-              Enim ad minima veniam, quis nostrum exercitationem ullam
-              corporis suscipit laboriosam, nisi ut aliquid commodi quis
-              nostrum minima.
+I sought counseling services due to my struggles with academic performance and resulting mental health issues.Through their guidance, I gained valuable insights into managing my stress and improving my study habits. The sessions not only enhanced my mental well-being but also positively impacted my academic performance. I highly recommend their services to anyone facing similar challenges.
             </p>
           </div>
         </div>
