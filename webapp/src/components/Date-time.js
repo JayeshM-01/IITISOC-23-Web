@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { Datepicker, Input, initTE,Timepicker } from "tw-elements";
 import Axios from "axios";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const Date = () => {
   const [uname,setuName]=useState("");
   const [inputdate,setInputdate]=useState("");
   const [inputtime,setInputtime]=useState("");
   const [dt,setdt]=useState([]);
-
+  
   const appont = () => {
     Axios.post("http://localhost:3001/dt", {
       name: uname,
@@ -22,7 +24,7 @@ export const Date = () => {
           date: inputdate,
         }
       ]);
-      alert("ok");
+      notify();
     });
   };
 
@@ -55,9 +57,34 @@ export const Date = () => {
     console.log(event.target.value);
   }
 
+  const notify = () => {toast.success('🦄 Appointment Booked Successfully!', {
+    position: "top-right",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "light",
+    });
+  }
 
   return (
     <div>
+      <ToastContainer
+position="top-right"
+autoClose={5000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover
+theme="light"
+/>
+{/* Same as */}
+<ToastContainer />
        <label>Name:</label>
         <input
           type="text"

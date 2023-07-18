@@ -1,4 +1,4 @@
-
+import "../App.css";
 
 export const Footer = () => {
 
@@ -14,7 +14,7 @@ export const Footer = () => {
 
     return (
         <div>
-    <hr></hr>
+    <hr className="darkline"></hr>
 <footer class="bg-white">
   <div class="mx-auto max-w-screen-xl px-4 pb-6 pt-16 sm:px-6 lg:px-8 lg:pt-24">
     <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">

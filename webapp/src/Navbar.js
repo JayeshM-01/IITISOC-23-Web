@@ -57,10 +57,11 @@ export const Navbar = () => {
     {!userPresent && (<Link to="/login"><button className="active"> Login </button></Link>)}
       {userPresent && (<Link to="/login"><button className="active" onClick={logout}> Logout </button></Link>)}
       <div>
+        <hr></hr>
       {userPresent && (<button className="after-login right-side rightpos active" onClick={() => navigate('/userpage')}>{username}</button>)}
       </div>
     </div>
-    <hr></hr>
+    <hr className="darkline"></hr>
   </div>)}
   </div>
   );

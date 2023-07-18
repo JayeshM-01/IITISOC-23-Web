@@ -3,6 +3,8 @@ import "./loginform.css";
 import { useNavigate } from "react-router-dom";
 import Axios from "axios";
 import { Navbar } from "./Navbar";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 export const Registeration = () => {
@@ -16,11 +18,38 @@ export const Registeration = () => {
         username: usernameReg,
         password: passwordReg,
       })
-      .then(navigate('/login'));
+      .then(notify());
+      // .then(navigate('/login'));
     };
+
+    const notify = () => {toast.success('🦄 Account Successfully created.Please login!!', {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      });
+    }
 
     return ( 
       <div >
+        <ToastContainer
+position="top-right"
+autoClose={5000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover
+theme="light"
+/>
+{/* Same as */}
+<ToastContainer />
       <div className="nav-none">
       < Navbar/> 
       </div>

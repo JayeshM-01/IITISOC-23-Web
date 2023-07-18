@@ -3,6 +3,8 @@ import { useState,useEffect} from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Axios from "axios";
 import {Navbar} from "./Navbar";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const Login = () => {
     const [loginStatus, setLoginStatus] = useState("");
@@ -18,6 +20,7 @@ export const Login = () => {
         }).then((response) => {
           if (response.data.message) {
             setLoginStatus(response.data.message);
+            notify();
           } else {
             setLoginStatus(response.data[0].username);
             navigate("/");
@@ -35,8 +38,35 @@ export const Login = () => {
         });
       }, []);
 
+      const notify = () => {toast.error('Login Failed!!!', {
+        position: "top-right",
+autoClose: 5000,
+hideProgressBar: false,
+closeOnClick: true,
+pauseOnHover: true,
+draggable: true,
+progress: undefined,
+theme: "light",
+        });
+      }
+
+
     return (
       <div>
+       <ToastContainer
+position="top-right"
+autoClose={5000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover
+theme="light"
+/>
+{/* Same as */}
+<ToastContainer />
       <div className="nav-none">
       < Navbar/> 
       </div>
@@ -58,8 +88,8 @@ export const Login = () => {
                 setPassword(e.target.value);
               }}
             />
-            <Link to="/register">Register </Link>
             <button className="reglog" onClick={login}> Login </button>
+            <Link to="/register"> Create an account </Link>
           </div>
           
     
