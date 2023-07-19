@@ -11,6 +11,10 @@ export const Date = () => {
   const [dt, setdt] = useState([]);
 
   const appont = () => {
+    if(uname=="" || conseller=="" || inputdate=="" || inputtime==""){
+      alert('Please fill out all fields before submitting');
+        return;
+    }
     Axios.post("http://localhost:3001/dt", {
       name: uname,
       conseller:conseller,
@@ -26,7 +30,8 @@ export const Date = () => {
           date: inputdate,
         }
       ]);
-      alert("ok");
+      window.location.href='http://localhost:3000/';
+      alert("Appoinment booked");
       
     });
   };
