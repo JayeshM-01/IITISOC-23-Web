@@ -1,18 +1,19 @@
 import React, { useEffect, useState } from "react";
-import { Datepicker, Input, initTE,Timepicker } from "tw-elements";
+import { Datepicker, Input, initTE, Timepicker } from "tw-elements";
 import Axios from "axios";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import "../App.css"
 
 export const Date = () => {
-  const [uname,setuName]=useState("");
-  const [inputdate,setInputdate]=useState("");
-  const [inputtime,setInputtime]=useState("");
-  const [dt,setdt]=useState([]);
-  
+  const [uname, setuName] = useState("");
+  const [conseller, setcName] = useState("");
+  const [inputdate, setInputdate] = useState("");
+  const [inputtime, setInputtime] = useState("");
+  const [dt, setdt] = useState([]);
+
   const appont = () => {
     Axios.post("http://localhost:3001/dt", {
       name: uname,
+      conseller:conseller,
       time: inputtime,
       date: inputdate,
     }).then(() => {
@@ -20,19 +21,21 @@ export const Date = () => {
         ...dt,
         {
           name: uname,
+          conseller:conseller,
           time: inputtime,
           date: inputdate,
         }
       ]);
-      notify();
+      alert("ok");
+      
     });
   };
 
-  useEffect( () => {
+  useEffect(() => {
     Axios.get("http://localhost:3001/getdt").then((response) => {
       setdt(response.data);
     });
-  },[] );
+  }, []);
 
   useEffect(() => {
     initTE({ Datepicker, Input });
@@ -47,53 +50,43 @@ export const Date = () => {
     initTE({ Input, Timepicker });
 
   }, []);
-   
-  const onChange1=(event)=>{
+
+  const onChange1 = (event) => {
     setInputdate(event.target.value);
     console.log(event.target.value);
   }
-  const onChange2=(event)=>{
+  const onChange2 = (event) => {
     setInputtime(event.target.value);
     console.log(event.target.value);
   }
 
-  const notify = () => {toast.success('🦄 Appointment Booked Successfully!', {
-    position: "top-right",
-    autoClose: 5000,
-    hideProgressBar: false,
-    closeOnClick: true,
-    pauseOnHover: true,
-    draggable: true,
-    progress: undefined,
-    theme: "light",
-    });
-  }
 
   return (
     <div>
-      <ToastContainer
-position="top-right"
-autoClose={5000}
-hideProgressBar={false}
-newestOnTop={false}
-closeOnClick
-rtl={false}
-pauseOnFocusLoss
-draggable
-pauseOnHover
-theme="light"
-/>
-{/* Same as */}
-<ToastContainer />
-       <label>Name:</label>
-        <input
-          type="text"
-          onChange={(event) => {
-            setuName(event.target.value);
-            console.log(event.target.value);
-          }}
-        />
-         <div className="pt-12 pb-8">
+      <div className="pt-12 pb-8">
+        <label >Name:
+          <input
+            type="text"
+            className="b-counseller"
+            onChange={(event) => {
+              setuName(event.target.value);
+              console.log(event.target.value);
+            }}
+          /></label>
+        <label for="pet-select" >
+          <select onInput={(e)=>{
+            setcName(e.target.value);
+            console.log(e.target.value);
+          }} name="pets" id="pet-select" className="b-counseller-select">
+            <option value="">--Please choose an Conseller--</option>
+            <option value="lucas">lucas</option>
+            <option value="liver">liver</option>
+            <option value="hamster">Hamster</option>
+            <option value="parrot">Parrot</option>
+            <option value="spider">Spider</option>
+            <option value="goldfish">Goldfish</option>
+          </select>
+        </label>
         <div
           class="relative mb-3"
           id="datepicker-disable-past"

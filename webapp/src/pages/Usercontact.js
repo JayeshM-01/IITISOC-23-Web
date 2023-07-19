@@ -11,6 +11,9 @@ export const Usercontact = () => {
     const [msgList, setmsgList] = useState([]);
   
     const addqueries = () => {
+      if(setName=="" || setEmail==""){
+           window.location.reload();
+      }else{
       Axios.post("http://localhost:3001/create", {
         name: name,
         Email: Email,
@@ -24,7 +27,9 @@ export const Usercontact = () => {
             msg: msg,
           },
         ]);
+        alert("querie send");
       });
+    }
     };
   
     useEffect( () => {
@@ -32,7 +37,7 @@ export const Usercontact = () => {
         setmsgList(response.data);
       });
     },[]);
-  
+    
   
     return (
       <div>

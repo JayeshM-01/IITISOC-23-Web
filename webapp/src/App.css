@@ -255,3 +255,21 @@ input {
 .relative {
   margin-bottom: 5px;
 }
+
+.b-counseller{
+  border: 1px solid #cecccc;
+  border-radius: 4px;
+  height: 38px;
+  margin: 3px;
+  padding: 10px;
+  width: 436px;
+}
+
+.b-counseller-select{
+  margin: 20px;
+  width: 436px;
+  border: 2px solid gainsboro;
+  padding: 10px;
+  margin-left: -6px;
+  border-radius: 5px;
+}

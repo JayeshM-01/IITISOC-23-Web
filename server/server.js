@@ -25,7 +25,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const db = mysql.createConnection({
   user: "root",
   host: "localhost",
-  password: "",
+  password: "Raja@5649",
   database: "employeesystem",
 });
 
@@ -154,13 +154,14 @@ app.delete("/delete/:id", (req, res) => {
 
 app.post("/dt", (req, res) => {
   const name=req.body.name;
+  const conseller=req.body.conseller;
   const date = req.body.date;
   const  time= req.body.time;
 
 
   db.query(
-    "INSERT INTO date_time (name,date,time) VALUES (?,?,?)",
-    [name,date, time],
+    "INSERT INTO date_time (name,conseller,date,time) VALUES (?,?,?,?)",
+    [name,conseller,date, time],
     (err, result) => {
       if (err) {
         console.log(err);

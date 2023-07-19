@@ -43,7 +43,7 @@ label{
 
 .cover::before {
     content: "";
-    background: url('https://th.bing.com/th/id/R.41856f4427be367ddb6e11c82d18e820?rik=yUEQJPW8rUMMeg&riu=http%3a%2f%2fthewowstyle.com%2fwp-content%2fuploads%2f2015%2f04%2fspring-desktop-backgrounds-hd.jpg&ehk=M5%2fhPe46%2fTW5lRyW2W8jGJg%2fHd3jgdfFgKRVBB%2beDLo%3d&risl=&pid=ImgRaw&r=0') no-repeat center;
+    background: url('./images/loginbg.jpg') no-repeat center;
     position: absolute;
     top: 0;
     left: 0;

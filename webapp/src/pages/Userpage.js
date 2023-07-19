@@ -1,8 +1,6 @@
-import { Navbar } from "../Navbar";
 import { useEffect, useState } from "react";
 import Axios from "axios";
 import "../pages/menu.css";
-import {Footer} from "../components/Footer";
 import {Useruserpage} from "./Useruserpage";
 import { Adminuserpage } from "./Adminuserpage";
 
