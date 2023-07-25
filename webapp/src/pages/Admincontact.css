@@ -4,6 +4,7 @@
 .cardss{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .card2 {
@@ -13,7 +14,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 320px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     padding: 32px;
     overflow: hidden;
@@ -26,7 +26,6 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 20px;
-    color: #e8e8e8;
     transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
   }
   
@@ -57,6 +56,7 @@
     position: absolute;
     left: 0;
     bottom: 0;
+    color: black;
     width: 100%;
     height: 5px;
     background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100% );
@@ -86,4 +86,11 @@
   .content .btn:active {
     box-shadow: none;
   }
-  
+  .para{
+    width: fit-content;
+    height: 100px;
+    color: #e8e8e8;
+  }
+  .heading{
+    color: rgb(230, 0, 0);
+  }

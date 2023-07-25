@@ -31,10 +31,11 @@ export const Admincontact = () => {
     <div className="cardss">
       {msgList.map((val, key) => {
         return (
-          <div class="card2">
+          <div className="card2">
             <div class="content">
-              <p class="heading">{val.name} {val.Email}</p>
-              <p class="para">{val.msg}</p>
+              <p classname="heading">Name :{val.name} </p>
+              <p classname="heading">Email : {val.Email}</p>
+              <p className="para">Message : {val.msg}</p>
               <button
                 class="btn "
                 onClick={() => {

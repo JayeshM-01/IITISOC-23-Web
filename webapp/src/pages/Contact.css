@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: row;
     height: 70vh;
+    min-height: 90vh;
     justify-content: center;
 }
 
@@ -95,4 +96,10 @@
    width: 94%;
    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
    background-color:rgb(118 118 118);
+}
+.cardss{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
