@@ -4,10 +4,14 @@ import Axios from "axios";
 import "../pages/menu.css";
 import {Footer} from "../components/Footer";
 import "./Adminmenu.css";
+import { useNavigate } from "react-router-dom";
 
 export const Adminmenu = () =>{
+  const navigate = useNavigate();
   const [d, setd] = useState([]);
   const [n, setn] = useState([]);
+  const setbookyes="Confirmed";
+  const setbookno="Cancelled";
 
   useEffect( () => {
     Axios.get("http://localhost:3001/getdt").then((response) => {
@@ -20,7 +24,40 @@ export const Adminmenu = () =>{
       console.log(response.data.user[0].username);
       setn(response.data.user[0].username);
     });
-  },[])
+  },[]);
+
+  const rishi=(value)=>{
+    if(value=="Cancelled"){
+      return <div class="text-red-500 text-lg">Cancelled</div>;
+    }
+    if(value=="Confirmed"){
+      return <div class="text-green-500 text-lg">Confirmed</div>;
+    }
+    return <div class="text-yellow-500 text-lg">Pending</div>;
+  };
+
+  const updateapponYes=(id)=>{
+    Axios.put("http://localhost:3001/update",{
+      book :setbookyes,
+      id: id,
+    }).then((res)=>{
+
+    })
+    alert("Conformed");
+    window.location.href="http://localhost:3000/adminmenu";
+
+  };
+
+  const updateapponNo=(id)=>{
+    Axios.put("http://localhost:3001/update1",{
+      book :setbookno ,
+      id: id,
+    }).then((res)=>{
+
+    })
+    alert("Cancelled");
+    window.location.href="http://localhost:3000/adminmenu";
+  };
 
     return (
         <div>
@@ -53,10 +90,12 @@ export const Adminmenu = () =>{
                       <h2 class="text-2xl font-bold text-zinc-700">{val.name}</h2>
                       <p class="mt-2 font-semibold text-zinc-700">{val.date}</p>
                       <p class="mt-4 text-zinc-500">{val.time}</p>
+                      <p class="mt-4 text-zinc-500">Status {rishi(val.book)}</p>
                     </div>
             
                     <div class="mt-6 grid grid-cols-2 gap-4">
-                      <button class="w-full rounded-xl border-2 border-blue-500 bg-white px-3 py-2 font-semibold text-blue-500 hover:bg-blue-500 hover:text-white">Solved</button>
+                      <button onClick={()=>{updateapponYes(val.id)}} class="w-full rounded-xl border-2 border-blue-500 bg-white px-3 py-2 font-semibold text-blue-500 hover:bg-blue-500 hover:text-white">YES</button>
+                      <button onClick={()=>{updateapponNo(val.id)}}  class="w-full rounded-xl border-2 border-blue-500 bg-white px-3 py-2 font-semibold text-blue-500 hover:bg-blue-500 hover:text-white">NO</button>
             
                     </div>
                   </div>

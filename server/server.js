@@ -15,7 +15,7 @@ app.use(express.json());
 app.use(
   cors({
     origin: ["http://localhost:3000"],
-    methods: ["GET", "POST"," DELETE"],
+    methods: ["GET", "POST"," DELETE","PUT"],
     credentials: true,
   })
 );
@@ -157,11 +157,12 @@ app.post("/dt", (req, res) => {
   const conseller=req.body.conseller;
   const date = req.body.date;
   const  time= req.body.time;
+  const book=req.body.book;
 
 
   db.query(
-    "INSERT INTO date_time (name,conseller,date,time) VALUES (?,?,?,?)",
-    [name,conseller,date, time],
+    "INSERT INTO date_time (name,conseller,date,time,book) VALUES (?,?,?,?,?)",
+    [name,conseller,date, time,book],
     (err, result) => {
       if (err) {
         console.log(err);
@@ -182,6 +183,37 @@ app.get("/getdt", (req, res) => {
     }
   });
 });
+
+app.put("/update",(req,res)=>{
+  const id=req.body.id;
+  const book=req.body.book;
+
+  db.query(
+    "UPDATE date_time SET book=? WHERE id=?",
+    [book,id],(res,err)=>{
+      if (err) {
+        console.log(err);
+      } else {
+        res.send(result);
+      }
+    }
+  );
+})
+app.put("/update1",(req,res)=>{
+  const id=req.body.id;
+  const book=req.body.book;
+
+  db.query(
+    "UPDATE date_time SET book=? WHERE id=?",
+    [book,id],(res,err)=>{
+      if (err) {
+        console.log(err);
+      } else {
+        res.send(result);
+      }
+    }
+  );
+})
 
 
 app.listen(3001, () => {

@@ -23,6 +23,17 @@ export const Useruserpage = () => {
     });
   }, [])
 
+  const rishi=(value)=>{
+    if(value=="Cancelled"){
+      return <div class="text-red-500 text-lg">Cancelled</div>;
+    }
+    if(value=="conformed"){
+      return <div class="text-green-500 text-lg">Conformed</div>;
+    }
+    return <div class="text-yellow-500 text-lg">Pending</div>;
+  };
+
+
   return (
     <div>
       <div className="nav-none">
@@ -45,6 +56,7 @@ export const Useruserpage = () => {
                   <th className="py-3 px-4 text-sm font-medium uppercase tracking-wide" scope="col">Date</th>
                   {/* ::Email */}
                   <th className="py-3 px-4 text-sm font-medium uppercase tracking-wide" scope="col">Time</th>
+                  <th className="py-3 px-4 text-sm font-medium uppercase tracking-wide" scope="col">Status</th>
                 </tr>
               </thead>
 
@@ -62,6 +74,7 @@ export const Useruserpage = () => {
                         <td className="py-3 px-4 text-base text-gray-500 font-medium">{val.date}</td>
                         {/* ::User Email */}
                         <td className="py-3 px-4 text-base text-gray-500 font-medium">{val.time}</td>
+                        <td className="py-3 px-4 text-base text-gray-500 font-medium">{rishi(val.book)}</td>
                       </tr>
 
                     );

@@ -8,6 +8,7 @@ export const Date = () => {
   const [conseller, setcName] = useState("");
   const [inputdate, setInputdate] = useState("");
   const [inputtime, setInputtime] = useState("");
+  const book="pending";
   const [dt, setdt] = useState([]);
 
   const appont = () => {
@@ -20,6 +21,7 @@ export const Date = () => {
       conseller:conseller,
       time: inputtime,
       date: inputdate,
+      book: book,
     }).then(() => {
       setdt([
         ...dt,
@@ -28,6 +30,7 @@ export const Date = () => {
           conseller:conseller,
           time: inputtime,
           date: inputdate,
+          book: book,
         }
       ]);
       window.location.href='http://localhost:3000/';

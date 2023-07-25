@@ -14,6 +14,7 @@ import Henry from "./profile/Henry";
 import Alexander from "./profile/Alexander";
 import Oliver from "./profile/Oliver";
 import Userpage from "./pages/Userpage";
+import { Adminmenu } from "./pages/Adminmenu";
 
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
           <Route path="/alexander" element={<Alexander />} />
           <Route path="/oliver" element={<Oliver />} />
           <Route path="/userpage" element={<Userpage />} />
+          <Route path="/adminmenu" element={<Adminmenu />} />
           <Route path="*" element={<h1> PAGE NOT FOUND</h1>} />
         </Routes>
       </Router>
