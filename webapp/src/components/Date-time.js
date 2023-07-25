@@ -85,11 +85,13 @@ export const Date = () => {
           }} name="pets" id="pet-select" className="b-counseller-select">
             <option value="">--Please choose an Conseller--</option>
             <option value="lucas">lucas</option>
-            <option value="liver">liver</option>
-            <option value="hamster">Hamster</option>
-            <option value="parrot">Parrot</option>
-            <option value="spider">Spider</option>
-            <option value="goldfish">Goldfish</option>
+            <option value="liver">oliver</option>
+            <option value="hamster">agastha</option>
+            <option value="parrot">alexander</option>
+            <option value="spider">charlotte</option>
+            <option value="goldfish">ethan</option>
+            <option value="goldfish">henry</option>
+            <option value="goldfish">hazel</option>
           </select>
         </label>
         <div

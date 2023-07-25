@@ -2,12 +2,12 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function Product(props) {
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
-  // const handleBookAppointment = () => {
-  //   const route = `/${props.movetopage}`;
-  //   navigate(route);
-  // };
+  const handleBookAppointment = () => {
+    const route = `/${props.movetopage}`;
+    navigate(route);
+  };
 
   return (
     <div className="card">
@@ -16,7 +16,7 @@ export default function Product(props) {
       <p className="price">{props.price}</p>
       <p className="description"><b>{props.description}</b></p>
       <p>
-      <a href='http://localhost:3000/menu' className="b-mainbutton">Book appointment</a>
+      <button onClick={handleBookAppointment} className="b-mainbutton">Book appointment</button>
       </p>
     </div>
   );

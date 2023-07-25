@@ -19,8 +19,8 @@
     /* border: 2px solid black; */
 }
 .contact-us::before{
-    content: "";
-    background: url('https://images.pexels.com/photos/276514/pexels-photo-276514.jpeg') no-repeat center center/cover;
+     content: "";
+    /*background: url('https://images.pexels.com/photos/276514/pexels-photo-276514.jpeg') no-repeat center center/cover; */
     position: absolute;
     top: 0;
     left: 0;

@@ -72,7 +72,7 @@ export const Login = () => {
       <div className="nav-none">
         < Navbar />
       </div>
-      
+      <div className="mid">
       <div class=" w-full max-w-sm mx-auto overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800">
     <div class="px-6 py-4">
         <div class="flex justify-center mx-auto">
@@ -99,7 +99,7 @@ export const Login = () => {
             <div class="flex items-center justify-between mt-4">
 
                 <button class="px-6 py-2 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-500 rounded-lg hover:bg-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50" onClick={login}>
-                    Sign In
+                    Login
                 </button>
                 <h3>{loginStatus}</h3>
             </div>
@@ -111,6 +111,7 @@ export const Login = () => {
 
         <a href="/register" class="mx-2 text-sm font-bold text-blue-500 dark:text-blue-400 hover:underline">Register</a>
     </div>
+</div>
 </div>
       {/* <div className="box">
         <div className="cover">

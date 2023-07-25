@@ -23,7 +23,9 @@ label{
     padding: 0;
     margin: 0;
 }
-
+.mid{
+    margin-top: 10vh;
+}
 .cover {
     text-align: center;
     border: 3px solid rgb(0, 0, 0);
@@ -42,7 +44,7 @@ label{
 }
 .loginpage {
     content: "";
-    background: url('https://th.bing.com/th/id/R.6b70eca17b73ea64302a9350b0a903e4?rik=tRXj1Bzah0uyMw&riu=http%3a%2f%2fwallpapercave.com%2fwp%2fLiSEiMS.jpg&ehk=cSaBSCUb94kzjDG5mwwcOpLx4Kma5ssE5rYJHfTj4u4%3d&risl=&pid=ImgRaw&r=0') no-repeat center;
+    background: url('https://wallpapercave.com/wp/wp1853050.jpg') no-repeat center;
     position: absolute;
     top: 0;
     left: 0;
