@@ -36,7 +36,7 @@ export const Useruserpage = () => {
 
   return (
     <div>
-      <div className="nav-none">
+      <div className="nav">
         < Navbar />
       </div>
       <div className="consellers">

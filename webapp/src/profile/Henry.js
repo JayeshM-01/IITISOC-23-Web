@@ -9,7 +9,7 @@ export const Henry = () => {
   };
   return (
     <div>
-      <div className="nav-none">
+      <div className="nav">
         <Navbar />
       </div>
 

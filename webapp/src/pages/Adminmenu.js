@@ -61,7 +61,7 @@ export const Adminmenu = () =>{
 
     return (
         <div>
-     <div className="nav-none">
+     <div className="nav">
        < Navbar/> 
      </div>
  
@@ -72,8 +72,8 @@ export const Adminmenu = () =>{
         {d.map((val, key) => {
           if(val.conseller===n){
             return (
-                  <div class="flex  w-full items-center justify-center m-4">
-              <div class="w-full rounded-xl p-12 shadow-2xl shadow-blue-200 md:w-8/12 lg:w-6/12 bg-white">
+                  <div class="flex  w-full items-center justify-center m-4 flex-wrap ">
+              <div class="w-full rounded-xl p-12 shadow-2xl shadow-green-200 md:w-8/12 lg:w-6/12 bg-white">
                 <div class="grid grid-cols-1 gap-6 lg:grid-cols-12">
                   <div class="grid-cols-1 lg:col-span-3">
                     <div class="mx-auto flex h-[90px] w-[90px] items-center justify-center rounded-full bg-blue-100 p-4">
@@ -94,8 +94,8 @@ export const Adminmenu = () =>{
                     </div>
             
                     <div class="mt-6 grid grid-cols-2 gap-4">
-                      <button onClick={()=>{updateapponYes(val.id)}} class="w-full rounded-xl border-2 border-blue-500 bg-white px-3 py-2 font-semibold text-blue-500 hover:bg-blue-500 hover:text-white">YES</button>
-                      <button onClick={()=>{updateapponNo(val.id)}}  class="w-full rounded-xl border-2 border-blue-500 bg-white px-3 py-2 font-semibold text-blue-500 hover:bg-blue-500 hover:text-white">NO</button>
+                      <button onClick={()=>{updateapponYes(val.id)}} class="w-full rounded-xl border-2 border-black-500 bg-white px-3 py-2 font-semibold  hover:bg-green-400 hover:text-white">YES</button>
+                      <button onClick={()=>{updateapponNo(val.id)}}  class="w-full rounded-xl border-2 border-black-500 bg-white px-3 py-2 font-semibold  hover:bg-red-400 hover:text-white">NO</button>
             
                     </div>
                   </div>

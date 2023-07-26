@@ -9,7 +9,7 @@ export const Charlotte = () => {
   };
   return (
     <div>
-      <div className="nav-none">
+      <div className="nav">
         <Navbar />
       </div>
 

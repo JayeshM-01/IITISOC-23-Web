@@ -6,9 +6,9 @@ export default function Product(props) {
 
   const handleBookAppointment = () => {
     const route = `/${props.movetopage}`;
-    navigate(route);
+    window.location.href=route;
   };
-
+  
   return (
     <div className="card">
       <img className="product--image" src={props.url} alt="product image" />

@@ -27,7 +27,7 @@ export const Home = () => {
         </div>
       <div className="homebgcss"><div className='maincontent'><div className="maintext">
       Knowing yourself is one of the hardest and important things to attain to lead a peaceful and successful life. We can help you realize your true worth and potential.</div></div>
-      <a href='http://localhost:3000/menu' className="mainbutton">Get Started</a>
+      <a href='http://localhost:3000/login' className="mainbutton">Get Started</a>
       </div>
 
       <h1 className='heading'>Counsellers</h1>

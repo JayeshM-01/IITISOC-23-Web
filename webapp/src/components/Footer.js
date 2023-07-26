@@ -13,7 +13,7 @@ export const Footer = () => {
       }
 
     return (
-        <div>
+        <div >
     <hr className="darkline"></hr>
 <footer class="bg-white">
   <div class="mx-auto max-w-screen-xl px-4 pb-6 pt-16 sm:px-6 lg:px-8 lg:pt-24">

@@ -162,43 +162,8 @@ export const Usercontact = () => {
     </div>
 
 
-      <div className="contact-us">
-        <div className="c-information">
-          <h2 className="c-heading">Contact Us</h2>
-          <div className="c-main-lable">
-            <label className="c-lable">Full Name
-              <input
-                className="c-input"
-                placeholder="eg. raja"
-                type="text"
-                onChange={(event) => {
-                  setName(event.target.value);
-                }}
-              />
-            </label>
-            <label className="c-lable">Email
-              <input
-                className="c-input"
-                placeholder="eg. help@gmail.com"
-                type="Email"
-                onChange={(event) => {
-                  setEmail(event.target.value);
-                }}
-              />
-            </label>
-          </div>
-          <label className="c-lable-msg">Explain Queries
-            <textarea
-              className="c-input-msg"
-              placeholder="please clear your dout"
-              type="text"
-              onChange={(event) => {
-                setMsg(event.target.value);
-              }} />
-          </label>
-          <a onClick={addqueries} className="c-submit">Send</a>
-        </div>
-      </div>
+      
+
       <Footer />
       </div>
     </div>

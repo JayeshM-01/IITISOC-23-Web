@@ -5,6 +5,10 @@
     text-align: center;
     position: -webkit-sticky;
  }
+
+body{
+    background-color: rgb(244, 244, 244);
+}
 .maincontent {
     justify-content: center;
     text-align: center;
@@ -24,7 +28,6 @@
 .homebgcss::before {
 
         content: "";
-        background: url('https://img.freepik.com/free-photo/mental-health-care-sketch-diagram_53876-122822.jpg?w=1380&t=st=1687836387~exp=1687836987~hmac=80f9d650521d6509a8770801acbd7389504ebfb199b272789fa8207feb477b78') no-repeat center center/cover;
         text-align: center;
         justify-content: center;
         position: absolute;
@@ -54,10 +57,14 @@
     border-radius: 3px;
     background-color: rgb(255, 255, 74);
     color: black;
-    display: block;
+    display: flex;
+    border: 1px solid rgb(15, 14, 14);
     margin: 1em auto;
     width: 7em;
+    height: 50px;
     transition: 0.3s;
+    padding-top: 10px;
+
 }
 .mainbutton:hover{
     transform: scale(1.2);
